@@ -39,5 +39,5 @@ class Home extends Component{
             <h3>{this.state.datos}</h3>}
         </div>
         )
-    
+    }
 }
