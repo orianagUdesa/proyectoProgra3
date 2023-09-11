@@ -15,10 +15,12 @@ class Home extends Component{
                 let peliculasArray = []
                 for(let i=0;i<5;i++)          //se usa for? o map y filter?
                     peliculasArray.push(data.results[i])
+
+                this.setState({
+                    peliculas: peliculasArray
+                }) 
             })
-            this.setState({
-                peliculas: peliculasArray
-            })                                //peliculas de donde sale?
+                                           //peliculas de donde sale?
             .catch( error => console.log(error))
 
 
@@ -28,15 +30,18 @@ class Home extends Component{
                     let seriesArray = []
                     for(let i=0;i<5;i++)          //se usa for? o map y filter?
                         seriesArray.push(data.results[i])
+
+                        this.setState({
+                            series: seriesArray
+                        }) //peliculas de donde sale?
                 })
-                this.setState({
-                    series: seriesArray
-                }) //peliculas de donde sale?
+                
                 .catch( error => console.log(error))
             
     }
     //VER EL RENDER MANIANA
     render(){
+
         console.log("me monte")
         return(
          <div>
@@ -44,11 +49,6 @@ class Home extends Component{
              <h3>Cargando...</h3> :
              <h3>{this.state.datos}</h3>}
         </div>
-<<<<<<< HEAD
-        )
-    }
-}
-=======
         )};
 
 }
@@ -56,4 +56,3 @@ class Home extends Component{
 export default Home;
 
 
->>>>>>> 84b56f9f50185978754ddc5310e8768abb22591e
