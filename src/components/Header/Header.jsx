@@ -5,7 +5,7 @@ function Header() {
     <img class="logo" src="./img/Disney_Plus_logo.svg.png"/>
     <nav class="navegacion">
     <ul>
-        <li class="lista"><a class="opciones" href="./index.html">Home</a></li>
+        <li class="lista"><a class="opciones" href="./Home.jsx">Home</a></li>
         <li class="lista"><a class="opciones" href="./favoritos.html">Favoritos</a></li>
         <li class="lista"><a class="opciones" href="./genres.html">Géneros</a></li>
     </ul>

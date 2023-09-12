@@ -41,13 +41,22 @@ class Home extends Component{
     }
     //VER EL RENDER MANIANA
     render(){
-
         console.log("me monte")
         return(
+         <div>
          <div>
              {this.state.datos === '' ?
              <h3>Cargando...</h3> :
              <h3>{this.state.datos}</h3>}
+        </div>
+        <h2 class="ofertas">Películas populares</h2>
+        
+        <h2 class="ofertas">Las más valoradas</h2>
+        
+        <h2 class="ofertas">Peliculas recomendadas</h2>
+        
+        <h2 class="ofertas">Últimos lanzamientos</h2>
+        
         </div>
         )};
 
