@@ -83,7 +83,6 @@ class Card extends Component {
                     
                     {
                         this.state.detalle === true ?
-                        <article className="cajados">
                             <section className="descripcion">Sinopsis
                             {
                                 this.props.pelicula.overview === "" ?
@@ -105,7 +104,6 @@ class Card extends Component {
                             <Link to={`/pelicula/${this.props.pelicula.id}`}>Ver detalles</Link>
                         </>
                     }
-                        </article>
             </section>
             
         )
