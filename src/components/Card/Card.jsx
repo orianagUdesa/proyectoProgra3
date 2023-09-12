@@ -1,5 +1,6 @@
 import React,{Component} from "react";
 import "./card.css";
+import { Link } from "react-router-dom";
 
 class Card extends Component {
     constructor(props) {
@@ -71,13 +72,13 @@ class Card extends Component {
 
     render (){
         return (
-                <section className="seccion1">
+            <section className="seccion1">
                     <div class="imagen">
                         <img src={`https://image.tmdb.org/t/p/w500${this.props.pelicula.poster_path}`} alt={this.props.pelicula.title}/>
                     </div>
                     <div class="contcalificacion">
-                        <h1 class="titulo"> {this.props.pelicula.title}</h1>
-                        <h3 class="calificacion">Calificación:{this.props.pelicula.vote_average} </h3>
+                        <h1 className="titulo"> {this.props.pelicula.title}</h1>
+                        <h3 className="calificacion">Calificación:{this.props.pelicula.vote_average} </h3>
                     </div>
                     
                     {
@@ -92,7 +93,7 @@ class Card extends Component {
                             }
                             </section> : null
                     }
-                    <button onClick = {() => this.setState({ detalle: !this.state.detalle })}>Ver { this.state.detalle ? "menos" : "más" }</button>
+                    <button onClick = {() => this.setState({ detalle: !this.state.detalle })}> Ver { this.state.detalle ? "menos" : "más" }</button>
                     {
                         this.props.pelicula.name ?
                         <>
@@ -105,11 +106,11 @@ class Card extends Component {
                         </>
                     }
                         </article>
-                </section>
+            </section>
             
         )
     }
-    }
+}
 
 
 

@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
+import Card from '../Card/Card';
 
 class Home extends Component{
     constructor (props){
@@ -13,8 +16,10 @@ class Home extends Component{
             .then(response => response.json())
             .then(data => {
                 let peliculasArray = []
-                for(let i=0;i<5;i++)          //se usa for? o map y filter?
+
+                for(let i=0;i<5;i++) {         //se usa for? o map y filter?
                     peliculasArray.push(data.results[i])
+                }
 
                 this.setState({
                     peliculas: peliculasArray
@@ -28,9 +33,10 @@ class Home extends Component{
             .then(response => response.json())
                 .then(data => {
                     let seriesArray = []
-                    for(let i=0;i<5;i++)          //se usa for? o map y filter?
-                        seriesArray.push(data.results[i])
 
+                    for(let i=0;i<5;i++) {          //se usa for? o map y filter?
+                        seriesArray.push(data.results[i])
+                    }
                         this.setState({
                             series: seriesArray
                         }) //peliculas de donde sale?
@@ -43,22 +49,30 @@ class Home extends Component{
     render(){
         console.log("me monte")
         return(
-         <div>
-         <div>
-             {this.state.datos === '' ?
-             <h3>Cargando...</h3> :
-             <h3>{this.state.datos}</h3>}
-        </div>
-        <h2 class="ofertas">Películas populares</h2>
-        
-        <h2 class="ofertas">Las más valoradas</h2>
-        
-        <h2 class="ofertas">Peliculas recomendadas</h2>
-        
-        <h2 class="ofertas">Últimos lanzamientos</h2>
-        
-        </div>
-        )};
+            <>
+            <Header />
+            <div>
+            <div>
+                {this.state.datos === '' ?
+                <h3>Cargando...</h3> :
+                <h3>{this.state.datos}</h3>}
+            </div>
+            <h2 class="ofertas">Películas populares</h2>
+            {
+                this.state.peliculas.map(()=> <Card />)
+            }
+            <h2 class="ofertas">Las más valoradas</h2>
+            {
+                this.state.map(()=> <Card />)
+            }
+            <h2 class="ofertas">Peliculas recomendadas</h2>
+            
+            <h2 class="ofertas">Últimos lanzamientos</h2>
+            
+            </div>
+            <Footer />
+            </>
+            )};
 
 }
 
