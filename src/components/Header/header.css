@@ -1,20 +1,26 @@
+*{
+    box-sizing: border-box;
+}
 header {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
-}
-.contlogo {
-    width: 15%;
+    margin-bottom: 30px;
 }
 .logo {
-    width: 75%;
+    width: 15%;
 }
 .navegacion {
-    width: 65%;
-    margin-top: 1.5%;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 ul {
+    width: 100%;
+    margin-bottom: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -22,7 +28,7 @@ ul {
 .lista {
     list-style: none;
     text-decoration: none;
-    color: red;
+    padding: 3%;
     margin: 20px;
 }
 .formulario {

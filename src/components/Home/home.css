@@ -14,13 +14,18 @@ body {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-around;
+    flex: none;
+    max-width: 100%;
+    position: relative;
 }
 img {
     width: 100%;
+    padding: 3%;
     border-radius: 13px;
 }
 a {
     color: white;
+    padding: 1%;
 }
 
 

@@ -4,13 +4,11 @@ import "./header.css";
 
 function Header() {
     return(
-    <header class="contlogo">
+    <header>
     <img class="logo" src="./img/Disney_Plus_logo.svg.png"/>
     <nav class="navegacion">
     <ul>
-        <li class="lista"><Navbar/> Home</li>
-        {/* <li class="lista"><Navbar/> Favoritos</li>
-        <li class="lista"><Navbar/> Generos</li> */}
+        <li class="lista"><Navbar/></li>
     </ul>
     </nav>
     <nav class="formulario">

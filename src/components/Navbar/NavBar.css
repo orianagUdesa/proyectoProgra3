@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+.ul{
+    list-style: none;
+    text-decoration: none;
+    margin: 20px;
+}
+a {
+    padding-top: 0;
+    padding: 5%;
+    margin: 35px;
+}

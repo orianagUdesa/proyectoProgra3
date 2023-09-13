@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 function Navbar (){
     return (
         <nav>
-            <ul className="barra principal">
-                <li><Link to="/"> Home</Link></li>
-                <li><Link to="/favoritos"> Favoritos</Link></li> 
-                <li><Link to="/vertodas"> Ver todas</Link></li> 
-                <li><Link to="/"></Link></li> //nombre del link
+            <ul class="lista">
+                <li class="componente"><Link to="/"> Home</Link></li>
+                <li class="componente"><Link to="/favoritos"> Favoritos</Link></li> 
+                <li class="componente"><Link to="/vertodas"> Ver todas</Link></li> 
             </ul>
             <ul></ul>
         </nav>

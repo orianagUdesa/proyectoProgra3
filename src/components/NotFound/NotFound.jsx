@@ -11,7 +11,7 @@ render(){
     return(
         <div>
         <p class= "error">Error 404 not found</p>
-        <img class="not found"  alt="" src="./public/img/mistake-5026_256.gif"/>
+        <img class="not found"  alt="" src="./img/mistake-5026_256.gif"/>
         </div>
     )
 
