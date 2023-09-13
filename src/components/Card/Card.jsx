@@ -108,7 +108,7 @@ class Card extends Component {
                         </article>
             </section>
             
-        )
+        );
     }
 }
 
