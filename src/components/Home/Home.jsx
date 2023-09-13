@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
+import Header from '../Header/Header.jsx';
+import Footer from '../Footer/Footer.jsx';
+
 import Card from '../Card/Card';
 
 class Home extends Component{
@@ -45,37 +46,33 @@ class Home extends Component{
                 .catch( error => console.log(error))
             
     }
-    //VER EL RENDER MANIANA
-    render(){
-        console.log("me monte")
-        return(
+    
+    render () {
+        return (
             <>
             <Header />
-            <div>
-            <div>
-                {this.state.datos === '' ?
-                <h3>Cargando...</h3> :
-                <h3>{this.state.datos}</h3>}
-            </div>
-            <h2 class="ofertas">Películas populares</h2>
-            {
-                this.state.peliculas.map(()=> <Card />)
-            }
-            <h2 class="ofertas">Las más valoradas</h2>
-            {
-                this.state.map(()=> <Card />)
-            }
-            <h2 class="ofertas">Peliculas recomendadas</h2>
-            
-            <h2 class="ofertas">Últimos lanzamientos</h2>
-            
-            </div>
+            <main>
+                <h2 class="ofertas">Películas populares</h2>
+                <section class="container-peliculas-populares">
+                    {
+                        this.state.peliculas.map((pelicula,index) => <Card pelicula={pelicula} key={index} />)
+                    }
+                </section>
+                <h2 class="ofertas">Series populares</h2>
+                <section class="container-peliculas-populares">
+                {
+                    this.state.series.map((serie, index) => { 
+                        return (
+                            <Card pelicula={serie} key={index} />
+                                )
+                        })
+                }
+                </section>
+            </main>
             <Footer />
             </>
-            )};
-
+        )
+    }
 }
 
 export default Home;
-
-
