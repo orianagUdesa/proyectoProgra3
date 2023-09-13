@@ -4,9 +4,9 @@ import NotFound from './components/NotFound/NotFound';
 import VerTodas from "./components/VerTodas/VerTodas";
 // // import Card from "./components/Card/Card";
 import Home from "./components/Home/Home.jsx";
-//import Detalle from './components/Detalle/DetallePelicula';
+import PeliculaDetalle from './components/PeliculaDetalle/PeliculaDetalle';
 import "./index.css"
-import DetallePelicula from './components/Detalle/DetallePelicula';
+
 
 
 function App() {
@@ -16,10 +16,12 @@ function App() {
         <Switch>
           <Route path='/' exact={true} component={Home}/>
           <Route path='/vertodas' exact={true} component={VerTodas}/>
-          {/* <Route path='/Pelicula/:id' exact={true} component={DetallePelicula}/> */}
+          <Route path='/pelicula/:id' exact={true} component={PeliculaDetalle}/>
+          
+          <Route path= "" component={NotFound} /> 
           </Switch>
            
-          <Route path= "" component={NotFound} /> 
+          
       </BrowserRouter>
     </div>
   );
