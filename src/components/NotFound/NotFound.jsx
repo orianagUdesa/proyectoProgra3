@@ -8,7 +8,13 @@ class NotFound extends Component {
     }
 
 render(){
-    return(<p>Error 404 not found</p>)
+    return(
+        <div>
+        <p>Error 404 not found</p>
+        <img class="not found"  alt="" src="./public/img/mistake-5026_256.gif"/>
+        </div>
+    )
+
 }
 }
 
