@@ -5,6 +5,7 @@ import VerTodas from "./components/VerTodas/VerTodas";
 // // import Card from "./components/Card/Card";
 import Home from "./components/Home/Home.jsx";
 import PeliculaDetalle from './components/PeliculaDetalle/PeliculaDetalle';
+import SerieDetalle from './components/SerieDetalle/serieDetalle'
 import "./index.css"
 
 
@@ -17,7 +18,7 @@ function App() {
           <Route path='/' exact={true} component={Home}/>
           <Route path='/vertodas' exact={true} component={VerTodas}/>
           <Route path='/pelicula/:id' exact={true} component={PeliculaDetalle}/>
-          
+          <Route path='/serie/:id' exact={true} component={SerieDetalle}/> 
           <Route path= "" component={NotFound} /> 
           </Switch>
            
