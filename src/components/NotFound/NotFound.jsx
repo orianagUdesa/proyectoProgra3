@@ -7,7 +7,9 @@ class NotFound extends Component {
         this.state = {}
     }
 
-
+render(){
+    return(<p>Error 404 not found</p>)
+}
 }
 
 export default NotFound;

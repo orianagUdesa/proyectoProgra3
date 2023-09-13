@@ -9,8 +9,8 @@ function Header() {
     <nav class="navegacion">
     <ul>
         <li class="lista"><Navbar/> Home</li>
-        <li class="lista"><Navbar/> Favoritos</li>
-        <li class="lista"><Navbar/> Generos</li>
+        {/* <li class="lista"><Navbar/> Favoritos</li>
+        <li class="lista"><Navbar/> Generos</li> */}
     </ul>
     </nav>
     <nav class="formulario">

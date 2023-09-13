@@ -70,7 +70,7 @@ class Card extends Component {
         }
     }
 
-    render (){
+    render (){console.log(this.props.pelicula)
         return (
             <section className="seccion1">
                     <div class="imagen">
