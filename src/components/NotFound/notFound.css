@@ -1,4 +1,11 @@
 .error {
     font-size: 50px;
     color: white;
+    text-align: center;
+}
+
+.not {
+    width: 35%;
+    align-items: center;
+    
 }
