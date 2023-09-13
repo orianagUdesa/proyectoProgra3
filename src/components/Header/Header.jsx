@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Navbar from "../Navbar/NavBar";
 import "./header.css";
 
 function Header() {
@@ -8,9 +8,9 @@ function Header() {
     <img class="logo" src="./img/Disney_Plus_logo.svg.png"/>
     <nav class="navegacion">
     <ul>
-        <li class="lista"><a class="opciones" href="./Home.jsx">Home</a></li>
-        <li class="lista"><a class="opciones" href="./favoritos.html">Favoritos</a></li>
-        <li class="lista"><a class="opciones" href="./genres.html">Géneros</a></li>
+        <li class="lista"><Navbar/> Home</li>
+        <li class="lista"><Navbar/> Favoritos</li>
+        <li class="lista"><Navbar/> Generos</li>
     </ul>
     </nav>
     <nav class="formulario">

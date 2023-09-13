@@ -106,7 +106,7 @@ class Card extends Component {
                     }
             </section>
             
-        )
+        );
     }
 }
 
