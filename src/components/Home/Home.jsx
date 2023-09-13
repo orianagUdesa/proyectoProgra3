@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Header from '../Header/Header.jsx';
 import Footer from '../Footer/Footer.jsx';
 
+import "./home.css"
 import Card from '../Card/Card';
 
 class Home extends Component{
@@ -53,13 +54,13 @@ class Home extends Component{
             <Header />
             <main>
                 <h2 class="ofertas">Películas populares</h2>
-                <section class="container-peliculas-populares">
+                <section class="container peliculas-populares">
                     {
                         this.state.peliculas.map((pelicula,index) => <Card pelicula={pelicula} key={index} />)
                     }
                 </section>
                 <h2 class="ofertas">Series populares</h2>
-                <section class="container-peliculas-populares">
+                <section class="container peliculas-populares">
                 {
                     this.state.series.map((serie, index) => { 
                         return (

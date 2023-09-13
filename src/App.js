@@ -1,6 +1,5 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 // import VerTodas from './components/VerTodas/VerTodas';
-// import Footer from "./components/Footer/Footer";
 // import NotFound from './components/NotFound/NotFound';
 // // import VerTodas from "./components/VerTodas/VerTodas";
 // // import Card from "./components/Card/Card";
