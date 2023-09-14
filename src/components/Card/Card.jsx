@@ -6,8 +6,8 @@ class Card extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            detalle: false,
             favorito: false,
+            detalle: false
 
         }
     }
@@ -18,11 +18,11 @@ class Card extends Component {
         peliculasFav = JSON.parse(peliculasFav)
         seriesFav = JSON.parse(seriesFav)
         
-        if (peliculasFav ===null) {
+        if (peliculasFav === null) {
             peliculasFav = []
         }
 
-        if (seriesFav ===null){
+        if (seriesFav === null){
             seriesFav = []
         }
 
@@ -41,7 +41,7 @@ class Card extends Component {
         peliculasFav = JSON.parse(peliculasFav)
         seriesFav = JSON.parse(seriesFav)
 
-        if (peliculasFav ===null) {
+        if (peliculasFav === null) {
             peliculasFav = []
         }
 
@@ -50,11 +50,11 @@ class Card extends Component {
         }
 
         if (peliculasFav.includes(id)){
-            peliculasFav.splice(peliculasFav.indexOf(id), 1)
+            peliculasFav= peliculasFav.filter(unId => unId !== id)
             localStorage.setItem(peliculasFav,JSON.stringify(peliculasFav))
             this.setState({favorito:false})
         } else if (seriesFav.includes(id)){
-            seriesFav.splice(seriesFav.indexOf(id), 1)
+            seriesFav= seriesFav.filter(unId => unId !== id)
             localStorage.setItem(seriesFav,JSON.stringify(seriesFav))
             this.setState({favorito:false})
         } else {
