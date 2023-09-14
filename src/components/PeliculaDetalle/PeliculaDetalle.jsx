@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Header from '../Header/Header.jsx';
 import Footer from '../Footer/Footer.jsx';
+import "./peliculaDetalle.css"
 
 
 
@@ -25,14 +26,28 @@ class PeliculaDetalle extends Component {
             <>
                 <Header/>
                 <main>
-                    <h1>Pelicula detalle</h1>
-                    <img src={`https://image.tmdb.org/t/p/w342${this.state.pelicula.poster_path}`} alt={this.state.pelicula.title} />
-                    <h2>{this.state.pelicula.title}</h2>
-                <ul>
-                    <li>Rating: {this.state.pelicula.vote_average} </li> 
-                    <li>Fecha de estreno:{this.state.pelicula.release_date} </li>
-                    <li>Sinopsis: {this.state.pelicula.overview}</li>
-                </ul>
+                    <section class="seccion1">
+                        <div class= "imagen">
+                            <img class= "portadadetalle" src={`https://image.tmdb.org/t/p/w342${this.state.pelicula.poster_path}`} alt={this.state.pelicula.title} />
+                        </div>
+                        <div class= "contcalificacion">
+                            <h1 class ="titulo">{this.state.pelicula.title}</h1>
+                            <h2>Calificacion</h2>
+                                <p class="data">{this.state.pelicula.vote_average}</p>
+                        </div>
+                    </section>
+                    <section class="seccion2">
+                        <article class="cajauno">
+                            <h3 class="info">Fecha de estreno</h3>
+                                <p class="data">{this.state.pelicula.release_date}</p>
+                                <h3 class="info">Genero</h3>
+                                <p class="data">{this.state.pelicula.genres_ids}</p>
+                        </article>
+                        <article class="caja3">
+                            <h3 class="info">Sinopsis</h3>
+                                <p class="data">{this.state.pelicula.overview}</p>
+                        </article>
+                    </section>
                 </main>
                 <Footer />
             </>
