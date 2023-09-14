@@ -4,7 +4,7 @@ import Footer from '../Footer/Footer.jsx';
 
 
 
-class ResultadoBusqueda extends Component {
+/* class ResultadoBusqueda extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -12,3 +12,5 @@ class ResultadoBusqueda extends Component {
             resultado: []
         }
     }}
+ */
+//export default ResultadoBusqueda;
