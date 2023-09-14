@@ -10,7 +10,6 @@ function Navbar (){
                 <li class="componente"><Link to="/favoritos"> Favoritos</Link></li> 
                 <li class="componente"><Link to="/vertodas"> Ver todas</Link></li> 
             </ul>
-            <ul></ul>
         </nav>
     )
 }

@@ -108,15 +108,12 @@ class Card extends Component {
 
     render (){console.log(this.props.pelicula)
         return (
-            <section className="seccion1">
-                    <div class="imagen">
-                        <img src={`https://image.tmdb.org/t/p/w500${this.props.pelicula.poster_path}`} alt={this.props.pelicula.title}/>
-                    </div>
-                    <div class="contcalificacion">
-                        <h1 className="titulo"> {this.props.pelicula.title}</h1>
-                        <h3 className="calificacion">Calificación:{this.props.pelicula.vote_average} </h3>
-                    </div>
-                    
+            <section className="container">
+                <article class="caja">
+                    <img class="tamano" src={`https://image.tmdb.org/t/p/w500${this.props.pelicula.poster_path}`} alt={this.props.pelicula.title}/>
+                    <h1 className="titulo1"> {this.props.pelicula.title}</h1>
+                    <h3 className="calificacion">Calificación:{this.props.pelicula.vote_average} </h3>
+                </article>
                     {
                         this.state.detalle === true ?
                             <section className="descripcion">Sinopsis
