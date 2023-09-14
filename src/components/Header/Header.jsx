@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../Navbar/NavBar";
+import Formulario from '../Formulario/Formulario'
 import "./header.css";
 
 function Header() {
@@ -12,10 +13,11 @@ function Header() {
     </ul>
     </nav>
     <nav class="formulario">
-    <form action="./search-results.html" method="get">
+    <Formulario /> 
+    {/* <form action="./search-results.html" method="get">
         <input class="search barra"  id="inputBusqueda" type="text" name="buscador" value="" placeholder="Buscador"/>
         <button class="search boton" type="submit">Buscar</button>
-    </form>
+    </form> */}
     <p class="errorBuscador"></p>
     </nav>
     <i class="fa-solid fa-bars"></i>
