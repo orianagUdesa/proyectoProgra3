@@ -2,7 +2,6 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import NotFound from './components/NotFound/NotFound';
 import VerTodas from "./components/VerTodas/VerTodas";
-// // import Card from "./components/Card/Card";
 import Home from "./components/Home/Home.jsx";
 import PeliculaDetalle from './components/PeliculaDetalle/PeliculaDetalle';
 import SerieDetalle from './components/SerieDetalle/serieDetalle'
