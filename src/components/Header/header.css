@@ -1,26 +1,17 @@
-*{
+* {
     box-sizing: border-box;
 }
-header {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-    margin-bottom: 30px;
-}
-.logo {
+.contlogo {
     width: 15%;
 }
+.logo {
+    width: 75%;
+}
 .navegacion {
-    margin-top: 0;
-    display: flex;
-    flex-wrap: wrap;
-    
+    width: 65%;
+    margin-top: 1.5%;
 }
 ul {
-    width: 100%;
-    margin-bottom: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -28,23 +19,17 @@ ul {
 .lista {
     list-style: none;
     text-decoration: none;
-    padding: 3%;
-    margin: 20px;
+    color: white;
 }
 .formulario {
     width: 20%;
+    border-radius: 9px;
+    background-color: #000C54;
+    border: 1px white solid;
 }
 .errorBuscador {
     margin-top: 5px;
     margin-bottom: 5px;
     color: white;
     font-size: 13px;
-}
-.search {
-    border-radius: 9px;
-    background-color: #000C54;
-    margin-top: 8%;
-}
-.boton {
-    color: white;
 }

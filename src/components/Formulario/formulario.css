@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+.formulario {
+    width: 20%;
+}
+.search {
+    border-radius: 9px;
+    background-color: #000C54;
+    margin-top: 8%;
+    border: 1px white solid;
+}

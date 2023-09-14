@@ -11,3 +11,25 @@ a {
     padding: 5%;
     margin: 35px;
 }
+.lista {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.navegacion {
+    width: 65%;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 3%;
+}
+.lista {
+    list-style: none;
+}
+.opciones {
+    text-decoration: none;
+    color: white;
+    margin: 20px;
+}
+    
+

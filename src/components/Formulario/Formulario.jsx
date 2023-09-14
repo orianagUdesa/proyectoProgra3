@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Link } from "react-router-dom";
+import "./formulario.css";
 
 class Formulario extends Component {
     constructor(props) {
@@ -19,8 +20,8 @@ class Formulario extends Component {
     render() {
         return (
             <form onSubmit={fun=>fun.preventDefault()}>
-              <input type="text" onChange={(fun)=>this.guardar(fun)} value={this.state.buscador} />
-              <button type="submit"><Link to={`/resultadobusqueda/${this.state.buscador}`}>Buscar</Link></button>
+              <input class="search barra" type="text" onChange={(fun)=>this.guardar(fun)} value={this.state.buscador} />
+              <button class= "search boton" type="submit"><Link to={`/resultadobusqueda/${this.state.buscador}`}>Buscar</Link></button>
             </form>
            );
        
