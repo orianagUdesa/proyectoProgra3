@@ -8,21 +8,19 @@ class Formulario extends Component {
         buscador: ""
       }
     }
-    evitarSubmit(event){
-        event.preventDefault()
-    }
+    
     guardar(event){
         this.setState({
-          busqueda: event.target.value
+          buscador: event.target.value
         })
       }
 
 
     render() {
         return (
-            <form onSubmit={(event)=>this.evitarSubmit(event)}>
-              <input type="text" onChange={(event)=>this.guardar(event)} value={this.state.valor} />
-              <input type="submit" value="Submit" />
+            <form onSubmit={fun=>fun.preventDefault()}>
+              <input type="text" onChange={(fun)=>this.guardar(fun)} value={this.state.buscador} />
+              <button type="submit"><Link to={`/resultadobusqueda/${this.state.buscador}`}>Buscar</Link></button>
             </form>
            );
        
