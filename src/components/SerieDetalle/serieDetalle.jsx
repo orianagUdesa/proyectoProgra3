@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Header from '../Header/Header.jsx';
 import Footer from '../Footer/Footer.jsx';
+import "./serieDetalle.css"
 
 class SerieDetalle extends Component {
     constructor(props) { //que son las props, osea que viene?
@@ -24,14 +25,28 @@ class SerieDetalle extends Component {
             <>
                 <Header/>
                 <main>
-                    <h1>Detalle de la serie</h1>
-                    <img src={`https://image.tmdb.org/t/p/w342${this.state.serie.poster_path}`} alt={this.state.serie.title} />
-                    <h2>{this.state.serie.title}</h2>
-                <ul>
-                    <li>Rating: {this.state.serie.vote_average} </li> 
-                    <li>Fecha de estreno:{this.state.serie.release_date} </li>
-                    <li>Sinopsis: {this.state.serie.overview}</li>
-                </ul>
+                    <section class="seccion1">
+                        <div class= "imagen">
+                        <img src={`https://image.tmdb.org/t/p/w342${this.state.serie.poster_path}`} alt={this.state.serie.title} />
+                        </div>
+                        <div class= "contcalificacion">
+                           <h1 class="titulo">{this.state.serie.name}</h1>
+                           <h2>Calificacion</h2>
+                                <p class="data">{this.state.serie.vote_average}</p>
+                        </div>
+                    </section>
+                    <section class="seccion2">
+                        <article class="cajauno">
+                            <h3 class="info">Fecha de estreno</h3>
+                                <p class="data">{this.state.serie.first_air_date}</p>
+                            <h3 class="info">Genero</h3>
+                                <p class="data">{this.state.serie.genres_ids}</p>
+                        </article>
+                        <article class="caja3">
+                            <h3 class="info">Sinopsis</h3>
+                                <p class="data">{this.state.serie.overview}</p>
+                        </article>
+                    </section>
                 </main>
                 <Footer />
             </>

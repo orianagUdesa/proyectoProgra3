@@ -40,7 +40,7 @@ class PeliculaDetalle extends Component {
                         <article class="cajauno">
                             <h3 class="info">Fecha de estreno</h3>
                                 <p class="data">{this.state.pelicula.release_date}</p>
-                                <h3 class="info">Genero</h3>
+                            <h3 class="info">Genero</h3>
                                 <p class="data">{this.state.pelicula.genres_ids}</p>
                         </article>
                         <article class="caja3">

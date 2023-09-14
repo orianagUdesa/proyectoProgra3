@@ -1,0 +1,43 @@
+main {
+    color:white;
+}
+.seccion1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 0%;
+}
+.contcalificacion {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo {
+    font-size: 70px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+}
+.seccion2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 8px;
+}
+.cajauno {
+    width: 50%;
+}
+.info {
+    color: white;
+    margin-top: 30px;
+}
+.caja3 {
+    width: 50%;
+}
