@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+header {
+    display:flex;
+}
 .contlogo {
     width: 15%;
 }
@@ -9,11 +12,9 @@
 }
 .navegacion {
     width: 65%;
-    margin-top: 1.5%;
 }
 ul {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
 }
 .lista {
