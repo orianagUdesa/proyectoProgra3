@@ -7,7 +7,7 @@ function Navbar (){
         <nav class="navegacion">
             <ul class="lista">
                 <li class="componente"><Link to="/"> Home</Link></li>
-                <li class="componente"><Link to="/favoritos"> Favoritos</Link></li> 
+                <li class="componente"><Link to="/favoritos"> Favoritos</Link></li>
                 <li class="componente"><Link to="/vertodas"> Ver todas</Link></li> 
             </ul>
         </nav>

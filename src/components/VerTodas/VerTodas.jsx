@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import Header from '../Header/Header.jsx';
 import Footer from '../Footer/Footer.jsx';
 import Card from '../Card/Card.jsx';
-
 //import "./VerTodas.css"
 
 class VerTodas extends Component{
