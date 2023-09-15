@@ -11,4 +11,11 @@ button {
     border: 1px white solid;
     margin-right: 2%;
 }
+.titulo1 {
+    font-size: 25px;
+    color: white;
+}
+.calificacion {
+    color:white;
+}
 

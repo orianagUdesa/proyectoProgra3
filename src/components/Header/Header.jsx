@@ -7,7 +7,7 @@ function Header() {
     return(
     <header>
         <div class="contlogo">
-        <img class="logo" src="./img/Disney_Plus_logo.svg.png"/>
+        <img class="logo" src="../img/Disney_Plus_logo.svg.png"/>
         </div>
         <nav class="navegacion">
             <ul>
