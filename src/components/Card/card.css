@@ -18,4 +18,15 @@ button {
 .calificacion {
     color:white;
 }
+.caja2 {
+    color: white;
+    height: 50px;
+    width: 160px;
+    border-radius: 12%;
+    background-color: #000C54;
+    border: 1px white solid;
+    margin-right: 2%;
+    margin-top: 2%;
+    text-align: center;
+}
 

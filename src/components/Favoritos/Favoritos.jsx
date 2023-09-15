@@ -67,8 +67,6 @@ class Favoritos extends Component {
         return (
             <React.Fragment>
                 <Header/>
-                
-                <h1> Tus favoritos</h1>
                 <main>
                     <h2> Peliculas favoritas</h2>
                     <section>
