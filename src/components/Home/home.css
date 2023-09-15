@@ -1,10 +1,6 @@
 * {
     box-sizing: border-box;
 }
-body {
-    background-color: #000C54;
-    font-family: Avenir,sans-serif;
-}
 .ofertas {
     color: white;
     margin-left: 10px;
@@ -13,12 +9,11 @@ body {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: space-around;
     max-width: 100%;
     position: relative;
 }
 img {
-    width: 275%;
+    width: 100%;
     padding: 3%;
     border-radius: 13px;
 }
@@ -28,18 +23,9 @@ a {
 }
 
 
-
-
-
-
-
-
-
-
-
 @media (max-width: 1040px) {
     .navegacion {
-        width: 60%;
+        width: 40%;
     }
     .formulario {
         width: 20%;

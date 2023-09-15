@@ -110,21 +110,9 @@ class Card extends Component {
         return (
             <section className="container">
                 <article class="caja">
-                    <img class="tamano" src={`https://image.tmdb.org/t/p/w500${this.props.pelicula.poster_path}`} alt={this.props.pelicula.title}/>
+                    <img src={`https://image.tmdb.org/t/p/w500${this.props.pelicula.poster_path}`} alt={this.props.pelicula.title}/>
                     <h1 className="titulo1"> {this.props.pelicula.title}</h1>
-                    <h3 className="calificacion">Calificación:{this.props.pelicula.vote_average} </h3>
-                </article>
-                    {
-                        this.state.detalle === true ?
-                            <section className="descripcion">Sinopsis
-                            {
-                                this.props.pelicula.overview === "" ?
-                                <p> No hay sinopsis </p> :
-                                <p> {this.props.pelicula.overview}</p>
-
-                            }
-                            </section> : null
-                    }
+                    <h3 className="calificacion">Calificación: {this.props.pelicula.vote_average} </h3>
                     <button onClick = {() => this.setState({ detalle: !this.state.detalle })}> Ver { this.state.detalle ? "menos" : "más" }</button>
                     {
                         this.props.pelicula.name ?
@@ -137,6 +125,24 @@ class Card extends Component {
                             <Link to={`/pelicula/${this.props.pelicula.id}`}>Ver detalles</Link>
                         </>
                     }
+                </article>
+                    {
+                        this.state.detalle === true ?
+                            <section className="descripcion">Sinopsis
+                            {
+                                this.props.pelicula.overview === "" ?
+                                <p> No hay sinopsis </p> :
+                                <p> {this.props.pelicula.overview}</p>
+
+                            }
+                            </section> : null
+                    }
+                <article>
+                    
+                </article>
+
+                
+                    
             </section>
             
             

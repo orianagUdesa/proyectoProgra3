@@ -3,13 +3,12 @@ container {
     flex-direction: row;
     justify-content: space-around;
 }
-tamano {
-    weight:70px
-}
 button {
-    background-color: red;
     color: white;
     height: 60px;
-    border-radius: 20%;
+    border-radius: 12%;
+    background-color: #000C54;
+    border: 1px white solid;
+    margin-right: 2%;
 }
 
