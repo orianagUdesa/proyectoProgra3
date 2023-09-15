@@ -83,7 +83,10 @@ class Card extends Component {
                         </> :
                         <>
                             <button onClick={() => this.agregarAFavoritos(this.props.pelicula.id)}>{this.state.boton}</button>
-                            <Link to={`/pelicula/${this.props.pelicula.id}`}>Ver detalles</Link>
+                            <article class="caja2">
+                                <Link to={`/pelicula/${this.props.pelicula.id}`}>Ver detalles</Link>
+                            </article>
+                            
                         </>
                     }
                 </article>
@@ -98,9 +101,6 @@ class Card extends Component {
                             }
                             </section> : null
                     }
-                <article>
-                    
-                </article>
 
                 
                     
