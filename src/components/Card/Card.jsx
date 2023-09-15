@@ -117,11 +117,11 @@ class Card extends Component {
                     {
                         this.props.pelicula.name ?
                         <>
-                            <button onClick={() => this.agregarAFavoritos(this.props.pelicula.id)}>{this.state.favorito ? "Quitar de favoritos" : "Agregar a favoritos"}</button>
+                            <button onClick={() => this.agregarAFavoritos(this.props.pelicula.id)}>{this.state.boton}</button>
                             <Link to={`/serie/${this.props.pelicula.id}`}>Ver detalles</Link>
                         </> :
                         <>
-                            <button onClick={() => this.agregarAFavoritos(this.props.pelicula.id)}>{this.state.favorito ? "Quitar de favoritos" : "Agregar a favoritos"}</button>
+                            <button onClick={() => this.agregarAFavoritos(this.props.pelicula.id)}>{this.state.boton}</button>
                             <Link to={`/pelicula/${this.props.pelicula.id}`}>Ver detalles</Link>
                         </>
                     }

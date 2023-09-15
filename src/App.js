@@ -7,6 +7,7 @@ import PeliculaDetalle from './components/PeliculaDetalle/PeliculaDetalle';
 import SerieDetalle from './components/SerieDetalle/serieDetalle';
 import ResultadoBusqueda from './components/ResultadoBusqueda/ResultadoBusqueda';
 import Formulario  from './components/Formulario/Formulario';
+import Favoritos from "./components/Favoritos/Favoritos";
 import "./index.css"
 
 
@@ -18,6 +19,7 @@ function App() {
         <Switch>
           <Route path='/' exact={true} component={Home}/>
           <Route path='/vertodas' exact={true} component={VerTodas}/>
+          <Route path='/favoritos' exact={true} component={Favoritos}/>
           <Route path='/pelicula/:id' exact={true} component={PeliculaDetalle}/>
           <Route path='/serie/:id' exact={true} component={SerieDetalle}/> 
           <Route path="/resultadobusqueda/:buscador" component={ResultadoBusqueda} />   
