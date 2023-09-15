@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Card from "../Card/Card";
 import Formulario from "../Formulario/Formulario";
+import CardFavoritos from "../Card/CardFavoritos";
 
 
 class Favoritos extends Component {
@@ -16,47 +17,36 @@ class Favoritos extends Component {
 
     componentDidMount(){
         let pelisFav = localStorage.getItem("pelisFavoritos");
-        let seriesFav = localStorage.getItem ("SeriesFavoritos");
-        pelisFav = JSON.parse (pelisFav);
-        seriesFav = JSON.parse(seriesFav);
+        
+    
 
 
         if (pelisFav !== null){
-            pelisFav = [];
+            const pelisFavoritas = JSON.parse(pelisFav);
+            let arrayPelis = [];
+            pelisFavoritas.forEach (pelicula => {
+                fetch(`https://api.themoviedb.org/3/movie/${pelicula}?api_key=cd221d9b379938868090204c71bbef7e&language=en-US&page=1`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                    arrayPelis.push(data);
+                    this.setState({ pelisFav: arrayPelis });
+                
+                })
+                .catch(error => console.log(error));
+            });
+            
+            
         }
-        if (seriesFav !== null){
-            seriesFav = [];
-        }
 
-        pelisFav.forEach (pelicula => {
-            fetch(`https://api.themoviedb.org/3/movie/${pelicula}?api_key=cd221d9b379938868090204c71bbef7e&language=en-US&page=1`)
-            .then(response => response.json())
-            .then(data => {
-                let pelisFavs = this.state.pelisFavs;
-                pelisFavs.push(data);
-                this.setState({ pelisFavs: pelisFavs });
-            })
-            .catch(error => console.log(error));
-        });
+    
 
-        seriesFav.forEach (serie => {
-            fetch(`https://api.themoviedb.org/3/movie/${serie}?api_key=cd221d9b379938868090204c71bbef7e&language=en-US&page=1`)
-            .then(response => response.json())
-            .then(data => {
-                let seriesFavs = this.state.seriesFavs;
-                seriesFavs.push(data);
-                this.setState({ seriesFavs: seriesFavs });
-            })
-            .catch(error => console.log(error));
-
-        });
+        
     }
 
-    agregarAFavoritos (id){
-        let pelisFavs = localStorage.getItem("favoritos");
-        //let seriesFavs = localStorage.getItem("favoritos");
+    agregarAFavoritos  =(id)=>{
+        let pelisFavs = localStorage.getItem("pelisFavoritos");
         pelisFavs = JSON.parse(pelisFavs);
-        //seriesFavs = JSON.parse (seriesFavs);
 
         if (!pelisFavs){
             pelisFavs = [];
@@ -65,8 +55,12 @@ class Favoritos extends Component {
         if (!pelisFavs.includes(id)) {
             pelisFavs.push(id);
 
-            localStorage.setItem("pelisFavs", JSON.stringify(pelisFavs));
-            this.setState ({pelisFavs})
+            localStorage.setItem("pelisFavoritos", JSON.stringify(pelisFavs));
+            this.setState ({pelisFav : pelisFavs})
+        } else {
+            const newPelis = pelisFavs.filter(pelicula => pelicula !== id);
+            localStorage.setItem("pelisFavoritos", JSON.stringify(newPelis));
+            this.setState ({pelisFav : newPelis})
         }
 
     }
@@ -84,19 +78,9 @@ class Favoritos extends Component {
                             this.state.pelisFav.length === 0 ?
                             <p>No tienes películas favoritas</p> :
                             <>
-                                {this.state.pelisFav.map((pelicula, index) => <Card pelicula={pelicula} key={index} />)}
+                                {this.state.pelisFav.map((pelicula, index) => <CardFavoritos pelicula={pelicula} key={index} funcion={this.agregarAFavoritos}/>)}
                             </>
                         } 
-                    </section>
-                    <h2> Series favoritas</h2>
-                    <section>
-                        {
-                            this.state.seriesFav.length === 0 ?
-                            <p>No tienes series favoritas</p> :
-                            <>
-                                {this.state.seriesFav.map((serie, index) => <Card pelicula={serie} key={index} />)}
-                            </>
-                        }
                     </section>
                 </main>
                 <Footer/>

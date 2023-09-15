@@ -3,7 +3,7 @@ import "./card.css";
 import Loader from "../Loader/Loader";
 import { Link } from "react-router-dom";
 
-class Card extends Component {
+class CardFavoritos extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -37,35 +37,6 @@ class Card extends Component {
         }
     }
 
-    agregarAFavoritos (id){
-        let arrayPelisFavoritos = [];
-        let recuperoStorageP = localStorage.getItem("pelisFavoritos");
-        arrayPelisFavoritos.push(id)
-        
-
-        if (recuperoStorageP !== null){
-            arrayPelisFavoritos = JSON.parse(recuperoStorageP);
-        } else {
-            arrayPelisFavoritos = [];
-        }
-
-        if (arrayPelisFavoritos.includes(id)){
-            //si el id esta en el array queremos sacar id.
-            arrayPelisFavoritos = arrayPelisFavoritos.filter(unId => unId !== id);
-            this.setState({boton: "Agregar a Favoritos"})
-        } else {
-      
-                arrayPelisFavoritos.push(id)
-                this.setState({boton: "Quitar de favoritos"})
-            
-         }
-
-        //subirlo a local storage stringifeado
-        let arraysPelisFavAString = JSON.stringify (arrayPelisFavoritos);
-        localStorage.setItem ("pelisFavoritos", arraysPelisFavAString);
-        
-
-    }
 
     render (){console.log(this.props.pelicula)
         return (
@@ -90,11 +61,11 @@ class Card extends Component {
                     {
                         this.props.pelicula.name ?
                         <>
-                            
+                            <button onClick={() => this.props.funcion(this.props.pelicula.id)}>{this.state.boton}</button>
                             <Link to={`/serie/${this.props.pelicula.id}`}>Ver detalles</Link>
                         </> :
                         <>
-                            <button onClick={() => this.agregarAFavoritos(this.props.pelicula.id)}>{this.state.boton}</button>
+                            <button onClick={() => this.props.funcion(this.props.pelicula.id)}>{this.state.boton}</button>
                             <Link to={`/pelicula/${this.props.pelicula.id}`}>Ver detalles</Link>
                         </>
                     }
@@ -107,4 +78,4 @@ class Card extends Component {
 
 
 
-export default Card;
+export default CardFavoritos;
