@@ -8,9 +8,7 @@ class Card extends Component {
         super(props)
         this.state = {
             favoritos: [],
-            boton: "Agregar a favoritos"
-            
-
+            isFavorite: false 
         }
     }
 
@@ -25,14 +23,14 @@ class Card extends Component {
             arrayPelisFavoritos= JSON.parse(recuperoStorageP);
 
             if (arrayPelisFavoritos.includes(this.props.pelicula.id)){
-                this.setState({boton: "Quitar de favoritos"})
+                this.setState({isFavorite: true})
             }
         }
 
         if (recuperoStorageS !== null){
             arraySeriesFavoritos = JSON.parse (recuperoStorageS);
             if (arraySeriesFavoritos.includes(this.props.pelicula.id)){
-                this.setState.apply({boton:"Quitar de favoritos"})
+                this.setState.apply({isFavorite: true})
             }
         }
     }
@@ -52,11 +50,11 @@ class Card extends Component {
         if (arrayPelisFavoritos.includes(id)){
             //si el id esta en el array queremos sacar id.
             arrayPelisFavoritos = arrayPelisFavoritos.filter(unId => unId !== id);
-            this.setState({boton: "Agregar a Favoritos"})
+            this.setState({isFavorite: false})
         } else {
       
                 arrayPelisFavoritos.push(id)
-                this.setState({boton: "Quitar de favoritos"})
+                this.setState({isFavorite: true})
             
          }
 
@@ -67,14 +65,29 @@ class Card extends Component {
 
     }
 
+
+
     render (){console.log(this.props.pelicula)
         return (
-            <section className="container">
+            <section className="containerCard">
                 <article class="caja">
                     <img src={`https://image.tmdb.org/t/p/w500${this.props.pelicula.poster_path}`} alt={this.props.pelicula.title}/>
-                    <h1 className="titulo1"> {this.props.pelicula.title}</h1>
-                    <h3 className="calificacion">Calificación: {this.props.pelicula.vote_average} </h3>
-                    <button onClick = {() => this.setState({ detalle: !this.state.detalle })}> Ver { this.state.detalle ? "menos" : "más" }</button>
+                    <h1 className="titulo1"> 
+                        {this.props.pelicula.title}
+                    </h1>
+                    <h3 className="calificacion">
+                        {
+                            Array(Math.floor(this.props.pelicula.vote_average/2)).fill('').map(()=>(
+                                <i class="bi bi-star-fill"></i>
+                            ))
+                        }
+                        {
+                            Array(Math.ceil(5 - this.props.pelicula.vote_average/2)).fill('').map(()=>(
+                                <i class="bi bi-star"></i>
+                            ))
+                        }
+                        {" "}<span className="score">{this.props.pelicula.vote_average}</span>
+                    </h3>
                     {
                         this.props.pelicula.name ?
                         <>
@@ -82,14 +95,28 @@ class Card extends Component {
                             <Link to={`/serie/${this.props.pelicula.id}`}>Ver detalles</Link>
                         </> :
                         <>
-                            <button onClick={() => this.agregarAFavoritos(this.props.pelicula.id)}>{this.state.boton}</button>
-                            <article class="caja2">
-                                <Link to={`/pelicula/${this.props.pelicula.id}`}>Ver detalles</Link>
-                            </article>
+                        <div class="buttonsCard">
+                            <button className={`buttonFavorite ${this.state.isFavorite && "buttonFavoriteActive"}`} 
+                                onClick={() => this.agregarAFavoritos(this.props.pelicula.id)}>
+                                {
+                                    this.state.isFavorite 
+                                        ? <i class="bi bi-heart-fill"></i> 
+                                        : <i class="bi bi-heart"></i>
+                                } 
+                            </button>
+                            <button className="buttonPrimary showSynopsisButton" 
+                                onClick = {() => this.setState({ detalle: !this.state.detalle })}>
+                                Ver { this.state.detalle ? "menos" : "más" }
+                            </button>
+                            <Link className="buttonPrimary" to={`/pelicula/${this.props.pelicula.id}`}>
+                                Ver detalles
+                            </Link>
+                        </div>
                             
                         </>
                     }
                 </article>
+                
                     {
                         this.state.detalle === true ?
                             <section className="descripcion">Sinopsis

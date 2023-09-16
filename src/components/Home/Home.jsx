@@ -53,22 +53,25 @@ class Home extends Component{
             <>
             <Header />
             <main>
-                <h2 class="ofertas">Películas populares</h2>
-                <section class="container peliculas-populares">
+                <div className='wrap'>
+                    <h2 class="ofertas">Películas populares</h2>
+                    <section class="peliculasP">
+                        {
+                            this.state.peliculas.map((pelicula,index) => <Card pelicula={pelicula} key={index} />)
+                        }
+                    </section>
+
+                    <h2 class="ofertas">Series populares</h2>
+                    <section class="container peliculas-populares">
                     {
-                        this.state.peliculas.map((pelicula,index) => <Card pelicula={pelicula} key={index} />)
+                        this.state.series.map((serie, index) => { 
+                            return (
+                                <Card pelicula={serie} key={index} />
+                                    )
+                            })
                     }
-                </section>
-                <h2 class="ofertas">Series populares</h2>
-                <section class="container peliculas-populares">
-                {
-                    this.state.series.map((serie, index) => { 
-                        return (
-                            <Card pelicula={serie} key={index} />
-                                )
-                        })
-                }
-                </section>
+                    </section>
+                </div>
             </main>
             <Footer />
             </>

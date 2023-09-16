@@ -1,23 +1,22 @@
 import React from "react";
 import Navbar from "../Navbar/NavBar";
 import Formulario from '../Formulario/Formulario'
+import { Link } from "react-router-dom";
 import "./header.css";
 
 function Header() {
     return(
     <header>
-        <div class="contlogo">
-        <img class="logo" src="../img/Disney_Plus_logo.svg.png"/>
+        <div class="logoImageContainer">
+        <Link to="/">
+            <div className="logoImage"></div>
+        </Link>
         </div>
-        <nav class="navegacion">
-            <ul>
-                <li class="lista"><Navbar/></li>
-        </ul>
-    </nav>
-    <nav class="formulario">
-        <Formulario /> 
-        <p class="errorBuscador"></p>
-    </nav>
+        <Navbar />
+        <nav class="formulario">
+            <Formulario /> 
+            <p class="errorBuscador"></p>
+        </nav>
     <i class="fa-solid fa-bars"></i>
     </header>
 )};

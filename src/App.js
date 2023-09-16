@@ -8,7 +8,8 @@ import SerieDetalle from './components/SerieDetalle/serieDetalle';
 import ResultadoBusqueda from './components/ResultadoBusqueda/ResultadoBusqueda';
 import Formulario  from './components/Formulario/Formulario';
 import Favoritos from "./components/Favoritos/Favoritos";
-import "./index.css"
+import "./index.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 

@@ -3,6 +3,11 @@ container {
     flex-direction: row;
     justify-content: space-around;
 }
+
+.containerCard {
+    display: flex;
+    flex-direction: column;
+}
 button {
     color: white;
     height: 60px;
@@ -12,12 +17,22 @@ button {
     margin-right: 2%;
 }
 .titulo1 {
-    font-size: 25px;
+    font-size: 16px;
     color: white;
+    margin: 0.5em 0em;
 }
 .calificacion {
     color:white;
+    color: yellow;
+    display: flex;
+    gap: 0em 0.2em
 }
+
+.calificacion .score{
+    color:white;
+    font-weight: bold;
+}
+
 .caja2 {
     color: white;
     height: 50px;
@@ -28,5 +43,11 @@ button {
     margin-right: 2%;
     margin-top: 2%;
     text-align: center;
+}
+
+.buttonsCard{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 

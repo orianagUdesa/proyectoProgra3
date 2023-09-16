@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Header from '../Header/Header.jsx';
 import Footer from '../Footer/Footer.jsx';
 import Card from '../Card/Card.jsx';
-//import "./VerTodas.css"
+import "./verTodas.css"
 
 class VerTodas extends Component{
     constructor (props){
@@ -41,7 +41,7 @@ class VerTodas extends Component{
                 <Header />
                 <main>
                 <h2 class="ofertas">Todas las peliculas</h2>
-                <section class="container peliculas-populares">
+                <section class="peliculasP">
                     {
                         this.state.peliculas.map((pelicula,index) => <Card pelicula={pelicula} key={index} />)
                     }

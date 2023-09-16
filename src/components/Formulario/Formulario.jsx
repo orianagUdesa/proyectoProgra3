@@ -1,32 +1,27 @@
-import React, { Component } from "react";
-import {Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./formulario.css";
 
-class Formulario extends Component {
-    constructor(props) {
-      super(props)
-      this.state = {
-        buscador: ""
-      }
-    }
-    
-    guardar(event){
-        this.setState({
-          buscador: event.target.value
-        })
-      }
+const Formulario = ()=>{
+  const [buscador, setBuscador] = useState("");
+  const history = useHistory();
 
+  return(
+    <form onSubmit={()=>{
+      history.push(`/resultadobusqueda/${buscador}`)
+    }}>
+      <div className="searchContainer">
+        <input className="inputSearch" 
+          onChange={(event)=> setBuscador(event.target.value)} 
+          value={buscador} />
 
-    render() {
-        return (
-            <form onSubmit={fun=>fun.preventDefault()}>
-              <input class="search barra" type="text" onChange={(fun)=>this.guardar(fun)} value={this.state.buscador} />
-              <button class= "search boton" type="submit"><Link to={`/resultadobusqueda/${this.state.buscador}`}>Buscar</Link></button>
-            </form>
-           );
-       
-      }
-    }
-   
+        <button className="buttonSearch" 
+          type="submit">
+          <i className="bi bi-search"></i>
+        </button>
+      </div>
+  </form>
+  )
+}
 
 export default Formulario;

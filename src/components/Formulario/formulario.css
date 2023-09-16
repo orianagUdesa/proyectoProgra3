@@ -4,10 +4,33 @@
 .formulario {
     width: 20%;
 }
+
 .search {
     border-radius: 9px;
-    background-color: #000C54;
     margin-top: 8%;
     border: 1px white solid;
-    color: white;
+    color: black;
 }
+
+.searchContainer{
+    width: 100%;
+    display: flex;
+    background: white;
+    overflow: hidden;
+    border-radius: 0.25em;
+    height: 30px;
+}
+
+.buttonSearch{
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    margin-right: 0;
+}
+
+.inputSearch{
+    width: 100%;
+    border: none;
+}
+

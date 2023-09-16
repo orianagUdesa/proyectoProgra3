@@ -1,8 +1,6 @@
 import React, {Component} from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import Card from "../Card/Card";
-import Formulario from "../Formulario/Formulario";
 import CardFavoritos from "../Card/CardFavoritos";
 
 

@@ -4,11 +4,17 @@ import "./NavBar.css";
 
 function Navbar (){
     return (
-        <nav class="navegacion">
-            <ul class="lista">
-                <li class="componente"><Link to="/"> Home</Link></li>
-                <li class="componente"><Link to="/favoritos"> Favoritos</Link></li>
-                <li class="componente"><Link to="/vertodas"> Ver todas</Link></li> 
+        <nav className="navegacion">
+            <ul className="listaNavegacion">
+                <li>
+                    <Link to="/"> Home</Link>
+                </li>
+                <li>
+                    <Link to="/favoritos"> Favoritos</Link>
+                </li>
+                <li>
+                    <Link to="/vertodas">Ver todas</Link>
+                </li> 
             </ul>
         </nav>
     )

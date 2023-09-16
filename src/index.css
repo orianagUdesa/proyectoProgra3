@@ -2,6 +2,44 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #000C54;
+  background: url(https://static-assets.bamgrid.com/product/disneyplus/images/background.dc67869b698f6c927aae59c68d9dda46.png) 50%/cover no-repeat fixed;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.buttonPrimary {
+  background-color: #F9F9F9;
+  color: #0E0B14;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 0.25em;
+  margin: auto;
+  text-decoration: none;
+  margin-bottom: 0.5em;
+}
+.buttonFavorite {
+  height: 56px;
+  width:56px;
+  border-radius: 0.25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color:black;
+  margin-bottom: 0.5em;
+}
+.buttonFavoriteActive {
+  background-color: red;
+  color:white;
+}
+.showSynopsisButton{
+  margin-left: 4px;
+  width: calc(100% - 68px);
+}
+
+.wrap{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }

@@ -17,7 +17,7 @@ a {
     color: white;
 }
 .navegacion {
-    width: 65%;
+    width: 100%;
     margin-top: 0;
     display: flex;
     flex-wrap: wrap;
@@ -25,7 +25,25 @@ a {
 }
 .lista {
     list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0em 1em
 }
+
+.listaNavegacion li a{
+    text-decoration: none;
+    display: flex;
+    width: 100px;
+}
+
+.listaNavegacion{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
 .opciones {
     text-decoration: none;
     color: white;
