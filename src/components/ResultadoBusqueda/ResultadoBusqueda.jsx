@@ -28,7 +28,10 @@ class ResultadoBusqueda extends Component {
         return(//console.log(resultado)
         <section>
         <Header/>
-        {this.state.resultado.map((resultado,index) => <Card pelicula={resultado} key={index} serie={resultado}/>)}
+        {this.state.resultado.length === 0 ? (
+            <img src="../img/loadingGif.gif" alt='Espere a que carge..' />
+            ):(this.state.resultado.map((resultado,index) => <Card pelicula={resultado} key={index} serie={resultado}/>))
+        }
         <Footer/>
         </section>
         )

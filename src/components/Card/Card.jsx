@@ -100,7 +100,7 @@ class Card extends Component {
                             }
                             </section> : null
                     }
-
+                
                 
                     
             </section>
