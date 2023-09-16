@@ -1,6 +1,5 @@
 import React,{Component} from "react";
 import "./card.css";
-import Loader from "../Loader/Loader";
 import { Link } from "react-router-dom";
 
 class Card extends Component {
@@ -128,7 +127,7 @@ class Card extends Component {
                             }
                             </section> : null
                     }
-
+                
                 
                     
             </section>
