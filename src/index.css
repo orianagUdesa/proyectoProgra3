@@ -30,7 +30,7 @@ body {
   margin-bottom: 0.5em;
 }
 .buttonFavoriteActive {
-  background-color: red;
+  background-color: #00304e;
   color:white;
 }
 .showSynopsisButton{
