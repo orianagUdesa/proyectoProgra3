@@ -65,8 +65,9 @@ class Card extends Component {
     }
 
 
-
-    render (){console.log(this.props.pelicula)
+    
+    render (){
+        const vote_average = this.props.pelicula.vote_average;
         return (
             <section className="containerCard">
                 <article class="caja">
@@ -76,16 +77,16 @@ class Card extends Component {
                     </h1>
                     <h3 className="calificacion">
                         {
-                            Array(Math.floor(this.props.pelicula.vote_average/2)).fill('').map(()=>(
+                            !!vote_average && Array(Math.floor(vote_average/2)).fill('').map(()=>(
                                 <i class="bi bi-star-fill"></i>
                             ))
                         }
                         {
-                            Array(Math.ceil(5 - this.props.pelicula.vote_average/2)).fill('').map(()=>(
+                            !!vote_average && Array(Math.ceil(5 - vote_average/2)).fill('').map(()=>(
                                 <i class="bi bi-star"></i>
                             ))
                         }
-                        {" "}<span className="score">{this.props.pelicula.vote_average}</span>
+                        {" "}<span className="score">{vote_average || ""}</span>
                     </h3>
                     {
                         this.props.pelicula.name ?
